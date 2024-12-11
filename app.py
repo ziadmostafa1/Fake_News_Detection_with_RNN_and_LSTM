@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pickle
 import numpy as np
@@ -11,6 +12,14 @@ from nltk.stem import WordNetLemmatizer
 import string
 import re
 import plotly.graph_objects as go
+
+# Ensure the NLTK data directory exists
+nltk_data_dir = '/home/appuser/nltk_data'
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+# Set the NLTK data path
+nltk.data.path.append(nltk_data_dir)
 
 # Download necessary NLTK resources
 nltk.download('punkt', quiet=True)
