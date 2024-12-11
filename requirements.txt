@@ -5,4 +5,3 @@ numpy==1.26.2
 nltk==3.8.1
 plotly==5.18.0
 scikit-learn
-re
